@@ -1,0 +1,7 @@
+NSSplitViewFollower
+
+Sorry for the lugubrious project name, it's not even that accurate. Basically, I wanted to figure out how I could get buttons on the bottom bar of a window (or any other view) to slide along with the left-side margin of a pane in a split view with which they are associated. The best example of this can be found on Apple's Address Book app that comes bundled with Mac OS X. As the split panes are resized, or the dividers are moved, the buttons below the second and third panes are pinned to the same origin.x as their associated pane. 
+
+There are probably a few ways of doing this, using the basic notifications from an NSView about it's position changing, however in this example I went with one of the NSSplitViewDelegate methods (@splitViewDidResizeSubviews:@). Not sure that this is the most efficient way to implement this, but it seems to be pretty smooth. Would love better suggestions, feel free to fork and send push requests. Just publishing my implementation in case someone else is looking for it – I took a look around but couldn't find any discussions about coding this.
+
+-Billy
